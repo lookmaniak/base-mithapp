@@ -1,10 +1,10 @@
 import m from 'mithril'
 import Navbar from '../components/Navbar'
 import Sidebar, { MobileSidebar } from '../components/Sidebar'
-import { createIcons, ChevronDown, Mail, Lock, SunMoon, Menu, User, LayoutDashboard, Users, Settings, Loader2, LogIn } from 'lucide'
+import { createIcons, ChevronDown, Mail, Home, Lock, SunMoon, Menu, User, LayoutDashboard, Users, Settings, Loader2, LogIn } from 'lucide'
 
 const PageWrapper = {
-  oncreate: () => createIcons({ icons: { ChevronDown, Mail, Lock, SunMoon, Menu, User, LayoutDashboard, Users, Settings, Loader2, LogIn }}),
+  oncreate: () => createIcons({ icons: { ChevronDown, Mail, Home, Lock, SunMoon, Menu, User, LayoutDashboard, Users, Settings, Loader2, LogIn }}),
   view: (vnode) => {
     return [
       m(Navbar),

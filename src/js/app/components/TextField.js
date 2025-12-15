@@ -10,7 +10,8 @@ const TextField = {
       autocomplete = true,
       className = "",
       type = "text",
-      icon // NEW: lucide icon name
+      icon,
+      onkeydown,// NEW: lucide icon name
     }
   }) {
     const id = label.toLowerCase().replaceAll(" ", "-");
@@ -53,6 +54,7 @@ const TextField = {
           className: className,
           value,
           oninput: e => oninput(e),
+          onkeydown: e => onkeydown(e),
           style: `
             background: transparent !important;
             padding-left: 0;

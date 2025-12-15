@@ -451,10 +451,10 @@ lucide-mithril@^1.0.3:
   resolved "https://registry.yarnpkg.com/lucide-mithril/-/lucide-mithril-1.0.3.tgz#77d51a5048614a9d30c3c37e5b425f2e3a9c9edb"
   integrity sha512-JeLiwZOfn/WnKXa8NQkHl/NXM8ho2g+7OL+If+oLgVSVwQlLuQLg6F5iOa/RBT66sxqRf80TvDr6dk3DbsWFIg==
 
-lucide@^0.556.0:
-  version "0.556.0"
-  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.556.0.tgz#d86cdeb8babb9257884fd65eece7065206d69561"
-  integrity sha512-sJ6NrZ+Q2Fv0Uardg7nsgjoKZ3r70wp3n30fvfbxMt5Fi1fQy1deS99z1g3xQpObok+LT1LjjcCyojUKGIHo7A==
+lucide@^0.561.0:
+  version "0.561.0"
+  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.561.0.tgz#6b548c98586a5683cf72bf092b3e9cae7867b1dd"
+  integrity sha512-XsOpN41YD1B5b05biTZhjlgPiiHXeRD9lqDmo30BKypzuXNiPKEXsGlsdvfHPa6CLP0Wv8Z2OYk2AHPrYkg5rw==
 
 micromatch@^4.0.5:
   version "4.0.8"
