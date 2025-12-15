@@ -1,0 +1,108 @@
+// -------------------------------------------------------------
+// BUTTONS
+// -------------------------------------------------------------
+.btn {
+  border-width: 1.5px;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 0.45rem 1.1rem;
+
+  &-primary {
+    background-color: $primary;
+    border-color: $primary;
+    &:hover { background-color: darken($primary, 5%); }
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    border-color: $secondary;
+    &:hover { background-color: darken($secondary, 5%); }
+  }
+}
+
+// -------------------------------------------------------------
+// ALERTS
+// -------------------------------------------------------------
+.alert {
+  border-width: 1.2px;
+  border-left-width: 5px;
+  border-radius: 0.4rem;
+  padding: 0.85rem 1rem;
+
+  &-primary   { border-left-color: $primary; }
+  &-success   { border-left-color: $success; }
+  &-danger    { border-left-color: $danger; }
+  &-warning   { border-left-color: $warning; }
+  &-info      { border-left-color: $info; }
+}
+
+// -------------------------------------------------------------
+// CARD
+// -------------------------------------------------------------
+.card {
+  border-radius: 0.8rem;
+  border-color: rgba($blue-900, 0.12);
+  box-shadow: $box-shadow;
+}
+
+// -------------------------------------------------------------
+// FORM CONTROL
+// -------------------------------------------------------------
+.form-control {
+  border-radius: 0.5rem;
+  border-width: 1.5px;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+  }
+}
+
+// -------------------------------------------------------------
+// NAVBAR
+// -------------------------------------------------------------
+.navbar {
+  border-bottom: 1px solid rgba($blue-900, 0.1);
+
+  .nav-link.active {
+    color: $primary !important;
+    font-weight: 600;
+  }
+}
+
+// -------------------------------------------------------------
+// DROPDOWN
+// -------------------------------------------------------------
+.dropdown-menu {
+  border-radius: 0.6rem;
+  border-color: rgba($blue-900, 0.1);
+  box-shadow: $box-shadow;
+
+  .dropdown-item:hover {
+    background-color: rgba($primary, 0.1);
+  }
+}
+
+// -------------------------------------------------------------
+// MODAL
+// -------------------------------------------------------------
+.modal-content {
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 25px rgba($blue-900, 0.35);
+}
+
+// -------------------------------------------------------------
+// TABLE
+// -------------------------------------------------------------
+.table {
+  border-color: rgba($blue-900, 0.2);
+
+  > :not(caption) > * > * {
+    border-bottom-color: rgba($blue-900, 0.1);
+  }
+
+  tr:hover {
+    background-color: rgba($primary, 0.05);
+  }
+}
+

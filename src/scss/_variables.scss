@@ -1,0 +1,127 @@
+// -------------------------------------------------------------
+// PALETTE BASE
+// -------------------------------------------------------------
+$blue-900: #0b2545; // dark indigo
+$blue-800: #13315c; // navy
+$blue-700: #134074; // deep blue
+$blue-300: #8da9c4; // soft blue-gray
+$blue-050: #eef4ed; // light grayish white
+
+$teal-600:   #1b7f6e;  // success
+$amber-500:  #caa769;  // warning
+$crimson-600:#b4443f;  // danger
+$cyan-500:   #6bb5d4;  // info
+
+// -------------------------------------------------------------
+// LIGHT THEME TOKENS
+// -------------------------------------------------------------
+$light-primary:   $blue-700;
+$light-secondary: $blue-800;
+$light-info:      $blue-300;
+$light-success:   $teal-600;
+$light-warning:   $amber-500;
+$light-danger:    $crimson-600;
+$light-light:     $blue-050;
+$light-dark:      $blue-900;
+
+// -------------------------------------------------------------
+// DARK THEME TOKENS
+// -------------------------------------------------------------
+$dark-primary:   $blue-300;
+$dark-secondary: $blue-700;
+$dark-info:      $blue-700;
+$dark-success:   #2a9d8f;
+$dark-warning:   #d8b26f;
+$dark-danger:    #c85a52;
+$dark-light:     $blue-800;
+$dark-dark:      $blue-900;
+
+// -------------------------------------------------------------
+// BOOTSTRAP VARIABLE OVERRIDES – LIGHT MODE (DEFAULT)
+// -------------------------------------------------------------
+$primary:   $light-primary;
+$secondary: $light-secondary;
+$info:      $light-info;
+$success:   $light-success;
+$warning:   $light-warning;
+$danger:    $light-danger;
+$light:     $light-light;
+$dark:      $light-dark;
+
+$body-bg:   #ffffff;
+$body-color:$blue-900;
+
+// Borders / grays
+$border-color: rgba($blue-900, 0.15);
+$input-border-color: rgba($blue-900, 0.2);
+
+// Links
+$link-color: $primary;
+$link-hover-color: darken($primary, 5%);
+
+// Shadows for a soft blue-ish UI
+$box-shadow: 0 3px 10px rgba($blue-900, 0.12);
+
+$font-family-sans-serif: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$body-font-weight: 400;
+$headings-font-weight: 600;
+$headings-font-family: 'Barlow', sans-serif;
+
+$font-family-sans-serif: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$body-font-weight: 400;
+$headings-font-weight: 600;
+$headings-font-family: 'Barlow', sans-serif;
+
+:root {
+        
+  --bs-font-sans-serif: 'Barlow', system-ui, sans-serif;
+  --bs-body-font-family: 'Barlow', system-ui, sans-serif;
+  --bs-primary: #134074;
+  --bs-secondary: #13315c;
+  --bs-info: #8da9c4;
+  --bs-success: #1b7f6e;
+  --bs-warning: #caa769;
+  --bs-danger: #b4443f;
+  --bs-light: #eef4ed;
+  --bs-dark: #0b2545;
+
+  --bg-body: #f7f9fc;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #f0f3f7;
+  --text-main: #0b2545;
+
+  --radius: 0.55rem;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.08);
+  --shadow-md: 0 2px 6px rgba(0,0,0,.10);
+  --space: 1rem;
+
+  --sidebar-bg: var(--bg-sidebar);
+  --sidebar-color: var(--text-main);
+  --sidebar-hover-bg: rgba(19, 64, 116, 0.08); /* primary soft */
+  --sidebar-active-bg: rgba(19, 64, 116, 0.15);
+}
+
+[data-bs-theme="dark"] {
+  --bs-primary: #8da9c4;
+  --bs-secondary: #134074;
+  --bs-info: #134074;
+  --bs-success: #2a9d8f;
+  --bs-warning: #d8b26f;
+  --bs-danger: #c85a52;
+  --bs-light: #13315c;
+  --bs-dark: #0b2545;
+
+  --bg-body: #0b2545;
+  --bg-surface: #13315c;
+  --bg-sidebar: #0b2545;
+  --text-main: #eef4ed;
+
+  --sidebar-bg: var(--bg-sidebar);
+  --sidebar-color: var(--text-main);
+  --sidebar-hover-bg: rgba(141, 169, 196, 0.15); /* primary soft */
+  --sidebar-active-bg: rgba(141, 169, 196, 0.25);
+}

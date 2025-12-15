@@ -1,0 +1,71 @@
+// DARK MODE
+@include color-mode(dark) {
+
+  // Swap semantic tokens
+  $primary:   $dark-primary;
+  $secondary: $dark-secondary;
+  $info:      $dark-info;
+  $success:   $dark-success;
+  $warning:   $dark-warning;
+  $danger:    $dark-danger;
+  $light:     $dark-light;
+  $dark:      $dark-dark;
+
+  // Override Bootstrap CSS vars (important part!)
+  :root {
+    --bs-primary:   #{$dark-primary};
+    --bs-secondary: #{$dark-secondary};
+    --bs-info:      #{$dark-info};
+    --bs-success:   #{$dark-success};
+    --bs-warning:   #{$dark-warning};
+    --bs-danger:    #{$dark-danger};
+    --bs-light:     #{$dark-light};
+    --bs-dark:      #{$dark-dark};
+
+    --bs-body-bg:   #0b2545;
+    --bs-body-color:#eef4ed;
+
+    --bs-border-color: rgba(#eef4ed, 0.15);
+    --bs-card-bg:   #13315c;
+    --bs-card-border-color: rgba(#eef4ed, 0.1);
+    
+    --bs-font-sans-serif: 'Barlow', system-ui, sans-serif;
+    --bs-body-font-family: 'Barlow', system-ui, sans-serif;
+  }
+
+  // Buttons
+  .btn {
+    box-shadow: none !important;
+  }
+
+  // Form controls
+  .form-control {
+    background-color: $dark-light;
+    border-color: rgba(#ffffff, 0.1);
+    color: #ffffff;
+
+    &:focus {
+      border-color: $dark-primary;
+      box-shadow: 0 0 0 0.25rem rgba($dark-primary, 0.25);
+    }
+  }
+
+  // Navbar
+  .navbar {
+    background-color: $dark-dark !important;
+  }
+
+  // Dropdown
+  .dropdown-menu {
+    background-color: $dark-light;
+    border-color: rgba(#fff, 0.1);
+  }
+
+  // Table
+  .table {
+    --bs-table-bg: #13315c;
+    --bs-table-striped-bg: rgba(#ffffff, 0.06);
+    --bs-table-hover-bg: rgba(#ffffff, 0.1);
+  }
+}
+
