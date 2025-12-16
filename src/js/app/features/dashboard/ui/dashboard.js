@@ -11,7 +11,7 @@ const Dashboard = {
       m('div', m('h1', `Howdy, ${vnode.state.user?.name}!`)),
       
       m('div', m('h3', m(m.route.Link, { href: '/profile' },  `Your email is, ${vnode.state.user?.email}`))),
-      m('div', [m('h6', 'Wanna logout? '), m('button', {
+      m('div', [m('h6', 'Wanna logout? '), m('button.btn.btn-primary', {
           onclick: async e => {
           e.preventDefault()
 

@@ -18,6 +18,10 @@ const LoginPage = {
 const LoginForm = {
   email: "",
   password: "",
+  async handleLogin() {
+    const res = await authService.login(this.email, this.password);
+    if (res.success) m.route.set("/dashboard");
+  },
   oncreate: () => { createIcons({ icons: { Loader2, LogIn, Lock, Mail }})},
   view() {
     return m(".d-flex.align-items-center.justify-content-center.min-vh-100", [
@@ -44,6 +48,11 @@ const LoginForm = {
           label: "Email",
           exception: HttpException.email,
           oninput: e => this.email = e.target.value,
+          onkeydown: e => {
+            if(e.key == 'Enter') {
+              this.handleLogin()                         
+            }
+          },
           icon: 'mail' 
         })),
 
@@ -52,6 +61,11 @@ const LoginForm = {
           label: "Password",
           exception: HttpException.password,
           oninput: e => this.password = e.target.value,
+          onkeydown: e => {
+            if(e.key == 'Enter') {
+              this.handleLogin()                                  
+            }
+          },
           type: "password",
           autocomplete: false,
           icon: 'lock'
@@ -64,8 +78,7 @@ const LoginForm = {
             onclick: async e => {
               e.preventDefault();
 
-              const res = await authService.login(this.email, this.password);
-              if (res.success) m.route.set("/dashboard");
+              await this.handleLogin()
             }
           }, authService.isProcessing()
             ?  [

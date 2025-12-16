@@ -1,4 +1,5 @@
 import m from 'mithril'
+import authService from '../features/auth/services/auth_service'
 
 const Navbar = {
     view: () =>
@@ -22,10 +23,20 @@ const Navbar = {
                 m("i[data-lucide=user]")),
               m("ul.dropdown-menu.dropdown-menu-end",
                 [
-                  m("li", m("a.dropdown-item[href=#]", "Profile")),
+                  m("li", m(m.route.Link, { href: "/profile", className: "dropdown-item"}, "Profile")),
                   m("li", m("a.dropdown-item[href=#]", "Settings")),
                   m("li", m("hr.dropdown-divider")),
-                  m("li", m("a.dropdown-item[href=#]", "Logout"))
+                  m("li", m(m.route.Link, {
+                  href: '/logout',
+                  class: 'dropdown-item',
+                  onclick: async e => {
+                    e.preventDefault()
+                    const req = await authService.logout()
+                    if(req.success) {
+                      m.route.set("/login")                 
+                    }
+                   }
+                 }, authService.isProcessing() ? "Please wait..." : "Logout"))
                 ]
               )
             ]
